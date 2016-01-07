@@ -4,7 +4,7 @@ using WindowsServiceHost.Log;
 
 namespace WindowsServiceHost.Hosts
 {
-    public class ServiceHost : ServiceBase, IHost
+    internal class ServiceHost : ServiceBase, IHost
     {
         private ILogger logger;
         private ServiceConfiguration config;

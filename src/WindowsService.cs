@@ -38,7 +38,7 @@ namespace WindowsServiceHost
 
         private void ApplyConfiguration()
         {
-            var config = GetServiceConfiguartion();
+            var config = GetServiceConfiguration();
             processInstaller.Account = config.Account;
             serviceInstaller.DisplayName = config.DisplayName;
             serviceInstaller.ServiceName = config.ServiceName;
@@ -49,11 +49,11 @@ namespace WindowsServiceHost
             }
         }
 
-        protected abstract ServiceConfiguration GetServiceConfiguartion();
+        protected abstract ServiceConfiguration GetServiceConfiguration();
 
         public void Run()
         {
-            HostManager.CreateHost().Run(GetServiceConfiguartion());
+            HostManager.CreateHost().Run(GetServiceConfiguration());
         }
     }
 }

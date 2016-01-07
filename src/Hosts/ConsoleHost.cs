@@ -4,12 +4,12 @@ using WindowsServiceHost.Log;
 
 namespace WindowsServiceHost.Hosts
 {
-    public class ConsoleHost : IHost
+    internal class ConsoleHost : IHost
     {
         private readonly ILogger logger;
         private readonly ManualResetEvent exit;
 
-        public ConsoleHost()
+        internal ConsoleHost()
         {
             logger = LogManager.CreateLogger(string.Empty);
             exit = new ManualResetEvent(false);

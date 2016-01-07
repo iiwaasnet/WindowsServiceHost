@@ -2,9 +2,9 @@
 
 namespace WindowsServiceHost
 {
-    public static class HostEnvironment
+    internal static class HostEnvironment
     {
-        public static bool IsRunningAsService()
+        internal static bool IsRunningAsService()
            => !Environment.UserInteractive;
     }
 }

@@ -1,8 +1,8 @@
 ﻿namespace WindowsServiceHost.Hosts
 {
-    public static class HostManager
+    internal static class HostManager
     {
-        public static IHost CreateHost()
+        internal static IHost CreateHost()
             => HostEnvironment.IsRunningAsService()
                    ? (IHost) new ServiceHost()
                    : (IHost) new ConsoleHost();

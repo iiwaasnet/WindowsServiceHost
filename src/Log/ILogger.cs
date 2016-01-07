@@ -1,6 +1,6 @@
 namespace WindowsServiceHost.Log
 {
-    public interface ILogger
+    internal interface ILogger
     {
         void Warn(string message);
 

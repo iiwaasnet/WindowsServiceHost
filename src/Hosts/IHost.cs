@@ -1,6 +1,6 @@
 ﻿namespace WindowsServiceHost.Hosts
 {
-    public interface IHost
+    internal interface IHost
     {
         void Run(ServiceConfiguration config);
     }

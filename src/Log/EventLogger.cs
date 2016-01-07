@@ -2,7 +2,7 @@
 
 namespace WindowsServiceHost.Log
 {
-    public class EventLogger : ILogger
+    internal class EventLogger : ILogger
     {
         private readonly string source;
 

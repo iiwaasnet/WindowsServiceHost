@@ -2,7 +2,7 @@
 
 namespace WindowsServiceHost.Log
 {
-    public class ConsoleLogger : ILogger
+    internal class ConsoleLogger : ILogger
     {
         public void Warn(string message)
         {
