@@ -2,16 +2,16 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>WindowsService.Host</id>
-        <version>0.0.0.1</version>
+        <version>0.0.0.2</version>
         <title>WindowsService.Host</title>
         <authors>Sergey Ivasenko</authors>
         <owners>Sergey Ivasenko</owners>
-		<iconUrl>https://cdn.rawgit.com/iiwaasnet/WindowsServiceHost/master/img/services-icon.png</iconUrl>
+        <iconUrl>https://cdn.rawgit.com/iiwaasnet/WindowsServiceHost/master/img/services-icon.png</iconUrl>
         <projectUrl>https://github.com/iiwaasnet/WindowsServiceHost</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Simple Windows Service hosting library. Allows to install service with installutil.exe into Service Control Manager (SCM) or run as a Console Application.</description>
         <copyright>Copyright © 2016</copyright>
-		<tags>WindowsService Host</tags>
+        <tags>WindowsService Host</tags>
     </metadata>
     <files>
         <file src="bin\release\WindowsServiceHost.dll" target="lib\net46\WindowsServiceHost.dll" />
