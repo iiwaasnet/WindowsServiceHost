@@ -33,7 +33,7 @@ protected override ServiceConfiguration GetServiceConfiguration()
 ```
  4) Implement *Start()* and *Stop()* methods, referenced in the *GetServiceConfiguration()*
  
- 5) In Main() method instantiate an object of the class create at step (1) and call Run() method on it:
+ 5) In *Main()* method instantiate an object of the class create at step (1) and call *Run()* method on it:
 ```csharp
 internal static class Program
 {
