@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Configuration.Install;
 using System.ServiceProcess;
 
 namespace WindowsServiceHost
@@ -16,6 +17,6 @@ namespace WindowsServiceHost
 
         public ServiceAccount Account { get; set; }
 
-        public IEnumerable<ServiceInstaller> Installers { get; set; }
+        public IEnumerable<Installer> Installers { get; set; }
     }
 }
