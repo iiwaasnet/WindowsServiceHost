@@ -2,10 +2,10 @@
 Simple Windows Service hosting library. Allows to install service with *installutil.exe* into Service Control Manager (SCM) or run as a Console Application.
 
 # Why
-Although Topshelf is really nice, it doesn't support installing services with *installutil*, which might be a show-stopper sometines...
+Although [Topshelf](https://github.com/Topshelf/Topshelf) is really nice, it doesn't support installing services with *installutil*, which might be a show-stopper sometines...
 
 # Requirements
-.NET 4.6.x
+**.NET 4.6.x**
 
 Usage
 ----------------
