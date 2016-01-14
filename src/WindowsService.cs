@@ -12,6 +12,8 @@ namespace WindowsServiceHost
     {
         private readonly ServiceProcessInstaller processInstaller;
         private readonly ServiceInstaller serviceInstaller;
+        private const string ServiceNameArg = "servicename";
+        private const string DisplayNameArg = "displayname";
 
         protected WindowsService()
         {
@@ -39,6 +41,8 @@ namespace WindowsServiceHost
         private void ApplyConfiguration()
         {
             var config = GetServiceConfiguration();
+            config = MergeWithCommandLineArgs(config);
+
             processInstaller.Account = config.Account;
             serviceInstaller.DisplayName = config.DisplayName;
             serviceInstaller.ServiceName = config.ServiceName;
@@ -47,6 +51,17 @@ namespace WindowsServiceHost
             {
                 Installers.AddRange(config.Installers.ToArray());
             }
+        }
+
+        private ServiceConfiguration MergeWithCommandLineArgs(ServiceConfiguration config)
+        {
+            var serviceName = Context.Parameters[ServiceNameArg];
+            var displayName = Context.Parameters[DisplayNameArg];
+
+            config.ServiceName = string.IsNullOrWhiteSpace(serviceName) ? config.ServiceName : serviceName;
+            config.DisplayName = string.IsNullOrWhiteSpace(displayName) ? config.DisplayName : displayName;
+
+            return config;
         }
 
         protected abstract ServiceConfiguration GetServiceConfiguration();
