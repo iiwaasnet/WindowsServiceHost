@@ -45,3 +45,10 @@ internal static class Program
     => new MyServiceHost().Run();
 }
 ```
+Command-line arguments
+-------------------------
+The following command-line arguments are supported to allow multiple instance of a service to be installed on the same machine:
+
+*installutil* /serviceName="*service_instance_name*" /displayName="*service_instance_display_name*" *MyService.exe*
+
+*installutil* /serviceName="*service_instance_name*" *MyService.exe* /uninstall
