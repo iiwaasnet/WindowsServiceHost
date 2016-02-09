@@ -47,8 +47,21 @@ internal static class Program
 ```
 Command-line arguments
 -------------------------
-The following command-line arguments are supported to allow multiple instance of a service to be installed on the same machine:
+The following command-line arguments are supported:
+
+ * multiple installations of a service on the same machine:
 
 *installutil* /serviceName="*service_instance_name*" /displayName="*service_instance_display_name*" *MyService.exe*
 
 *installutil* /serviceName="*service_instance_name*" *MyService.exe* /uninstall
+
+
+ * unattended installation with specific user account:
+
+*installutil* /userName="*user_name*" /password="*pwd*" *MyService.exe*
+
+
+ * installation with pre-defined account:
+
+*installutil* /account="*LocalService|NetworkService|LocalSystem*" *MyService.exe*
+
