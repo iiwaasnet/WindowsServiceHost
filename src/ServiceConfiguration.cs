@@ -17,6 +17,10 @@ namespace WindowsServiceHost
 
         public ServiceAccount Account { get; set; }
 
+        public string UserName { get; set; }
+
+        public string Password { get; set; }
+
         public IEnumerable<Installer> Installers { get; set; }
     }
 }

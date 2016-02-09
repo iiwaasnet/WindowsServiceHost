@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>WindowsService.Host</id>
-        <version>0.0.0.4</version>
+        <version>0.0.0.5</version>
         <title>WindowsService.Host</title>
         <authors>Sergey Ivasenko</authors>
         <owners>Sergey Ivasenko</owners>
@@ -12,6 +12,7 @@
         <description>Simple Windows Service hosting library. Allows to install service with installutil.exe into Service Control Manager (SCM) or run as a Console Application.</description>
         <copyright>Copyright © 2016</copyright>
         <tags>WindowsService Host</tags>
+        <releaseNotes>Added support for unattended installation via command-line args /username, /password and /account.</releaseNotes>
     </metadata>
     <files>
         <file src="bin\release\WindowsServiceHost.dll" target="lib\net46\WindowsServiceHost.dll" />
