@@ -30,7 +30,7 @@ protected override ServiceConfiguration GetServiceConfiguration()
       ServiceName = "MyServiceName",
       DisplayName = "MyService Display Name",
       OnStart = Start,  // method to be executed on service start
-      OnStop = Stop,    // mehtod to be executed on service stop
+      OnStop = Stop,    // method to be executed on service stop
       Account = ServiceAccount.User,    // account, under which the service will be running
       Installers = new[] {new EventLogInstaller()}  // any additional Installer you would like to be executed as well
     };
