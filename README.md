@@ -1,6 +1,7 @@
 # WindowsServiceHost
 Simple Windows Service hosting library. Allows to install service with *installutil.exe* into Service Control Manager (SCM) or run as a Console Application.
 
+[![Build status](https://ci.appveyor.com/api/projects/status/6b43hnwedyp8jrlm?svg=true)](https://ci.appveyor.com/project/iiwaasnet/windowsservicehost)
 [![NuGet version](https://badge.fury.io/nu/WIndowsService.Host.svg)](https://badge.fury.io/nu/WIndowsService.Host)
 
 # Why
