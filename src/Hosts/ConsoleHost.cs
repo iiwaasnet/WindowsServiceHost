@@ -46,11 +46,21 @@ namespace WindowsServiceHost.Hosts
 
         private void ConsoleOnCancelKeyPress(ServiceConfiguration config, ConsoleCancelEventArgs consoleCancelEventArgs)
         {
-            logger.Warn($"Stop signal detected.");
+            Console.WriteLine("Stop Host? [Y/N]:");
 
-            consoleCancelEventArgs.Cancel = true;
-            config.OnStop();
-            exit.Set();
+            var key = Console.ReadKey();
+            if (key.Key == ConsoleKey.Y)
+            {
+                logger.Warn("Exiting Host process...");
+                consoleCancelEventArgs.Cancel = false;
+                config.OnStop();
+                exit.Set();
+            }
+            else
+            {
+                consoleCancelEventArgs.Cancel = true;
+                logger.Info("Host process continues.");
+            }
         }
     }
 }
